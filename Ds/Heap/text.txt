@@ -1,0 +1,85 @@
+Heap Algorithm
+It is used to implement priority queue
+Priority queue 
+It is used in heap sort basically priority queue is a type when something which we wnat in the order of priority
+
+Binary heap is fo two type 
+Min heap-- highest is assigned lowest value
+max heap-Highest priority is assigned highest value
+
+A binary heap is a complete binary tree 
+complete binary tree is a tree in which the heap is filled completely but last level is not filled 
+We want to store binary heap as array 
+and it should start from left and end at right and last level can have no child 
+we can represent it in array without any space
+left=2i+1
+right=2i+2
+parent(i)=(i-1)//2
+
+
+example to understand this 
+[1,2,3,4,5,,6,7,8]
+left of 1 is 2(position)
+where as right of 1 is 3(position)
+parent of 3 is = 1(position)
+
+This formula can give left child right child and parent
+
+Advantages 
+Random Access
+complete binary tree so height of tree is completely used 
+Heap operation depend on height of tree
+
+
+Min Heap
+Min heap is completely binary tree the root/descendent should have lowest value
+                 10
+                 / \
+                20  15
+               /\   / \
+              30 40 18 19   
+Min heap is presented as array it is pictorial representation
+
+Decrease and Delete operation  
+                 10                      
+                 / \
+                20  40
+               /\   / 
+            80 100 70    
+                  |
+                  |
+                  5
+                 / \
+               10   40
+               /\     \
+              30 100   70  
+
+so in this basically we have been give i=3 and x=5 i is index that we have to change and so after changing the index min heap 
+property will be violated so we have to reassble the min heap
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

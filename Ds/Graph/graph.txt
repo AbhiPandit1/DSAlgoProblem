@@ -1,0 +1,140 @@
+Graph
+
+Two type of Graph unidirection And Directional
+Graph are represented in sets
+Unidirection---> In this type of graph (v,s) is not equal to (s,v)
+Directional--> In this type of graph (v,s) is eqaul to (s,v)
+
+
+Edge-It shows the relationship between v1 and v2
+
+Terms
+Unidirected Graph
+Degree of Edges-- No of vertices going throught It
+sum of degress=2*|edges|
+Maxm number of edges= (|v|*(|v|-1))//
+
+
+Directed Graph-- There are two type of Degree
+1.In degree --No of edges coming toward It 
+2.Out degree-- no of edges going through It
+
+Sum of indegress=|Edges|
+Sum of outdegress=|Edges|
+
+
+Maxm no od edges in directed Graph =|v| * (|v|-1)
+
+
+Self Loop-- In this the vertices are connected to itself we do not considered 
+            self loop in above cases
+
+walk-- Basically it is nothing but when something start from a vertices and end at smae 
+       vertices  
+
+Path-- in path we do not have repeated vertices while in walk we have repeated 
+       vertices
+
+Cyclic- A graph is called cyclic if there is a walk which start and end at same vertices
+
+
+
+Graph Representation
+There are many way to represent a graph but two most famous way to represent a graph is
+1.Adjacency Matrix
+2.Adjacency List
+
+1.Adjacency Matrix
+Size of Matrix=|v|x|v|
+|v|-- No of vertices
+
+For unidirected graph it is a unidirected Matrix
+    0 1 2 3
+0   0 1 1 0
+1   1 0 1 0
+2   1 1 0 1
+3   0 1 0 0
+
+matrix[i][j]--> if there is vertic than one else 0
+Adjacency matric is a Symettric matric upper part and lower part is equal to one another
+
+
+For directed graph
+
+    0 1 2 3
+0   0 1 1 0
+1   0 0 1 0
+2   0 0 0 1
+3   0 0 0 0
+
+for directed graph it may or may  not be a symmetric matrix
+
+For string value
+How to handle a graph with arbitary vertices name
+
+One ds we need is array vertices name can be seen as matrix
+0-->ABC
+1-->BCD
+2-->CDE
+3-->EFG
+
+For many time we need reverse mappings so we use hash mappings
+
+
+
+Different property Adjacency matrix
+
+    0 1 2 3
+0   0 1 1 0
+1   1 0 1 0
+2   1 1 0 1
+3   0 0 1 0
+
+Space require--> Q(n)
+Find all vertices adjacent to u--> Q(v)
+Find degress of u
+Add remove an edge-- Q(1)
+Add remove a vertex -- Q(u)
+
+Problem with adjacency matric Representation
+It only store connection of vertices and Edges
+
+
+
+Adjacency list 
+
+0-1-2
+1-0-2
+2-0-1-3
+3-2
+Most popular representation for Graph are dynammic size array and linked list
+But most friendly one for representing dynammic array is list or dynammic array
+because of it cache friendliness
+and disadvantage is wastage of space due to prelocation of some space
+
+
+Adjacency list representation of directed list graph
+0->1-2
+1->2
+2->3-1
+3->1
+
+
+
+Space required for adjacency list is Q(v+e)
+For unidirected--> Q(v+2e)
+for directed-->Q(v+e)
+
+Check if there is an edge from u--> Q(v)
+Find all adjacent of u--> Q(n)
+Find degree of u--> Q(1)
+Add an Edge-->Q(1)
+Remove an Edge-->Q(u)
+
+#Application of BFS
+Shortest Path in a unweighted graph
+Peer to peer network
+In Garbage collection(chineys algorithm)
+Social networking site
+Cycle Detection
+Ford Fulkeron Algorithm

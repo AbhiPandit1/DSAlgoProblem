@@ -1,0 +1,67 @@
+/*Tree*/
+in tree we can stor anything 
+               C
+               /\
+             /    \ 
+         A           B
+
+        C is parent A and B is children of C 
+
+        Root-- A node that have no parent 
+        Leaf- a leaf node is a node that have no children 
+
+        Binary - A tree that every node have atmost two children
+                -A Binary tree only have one Root
+                -Exactly one path bw root and any node
+        Property
+        node
+        node.left
+        node.right
+
+//Depth First Problem
+             A <--Start from here
+            /  \ 
+           B     C
+         /   \     \
+        D      E     F
+
+        Collection A,B,D,E,C,F
+Inorder Transversal-->inorder transversal is nothing but it means [Left Root Right]
+inorder transversal of above is [D B E A C F]
+
+
+PostOrder Transversal-- Stack=[Left Right Root]
+Postoder transversal of above is [D E B F C A]
+
+
+Preorder -- Stack[Root Left Right]
+Preorder transversal of above is [A B D E C F]§
+    A stack is sequesntial data structure which Do FIFO
+
+    We will start with root node and store A 
+    we will check if stack is empty
+    as it is not now we will pop out the A from stack and term it as visited
+    Now we will add b ,c in the stack [stack==B,A]
+    Now after this we will check if our stack is empty it is not so we sill push out
+    B from the stack [Stack==c]
+    Now we will transverse through B children[Stack==D,E,C]
+    We see now stack is not empty so we will pop out D[Stack=E,C]
+    Now we will see d have no children so we will pop out E and C and again it will 
+    become empty and we will se it has children as F
+    so we wil push it in Stack and then print it out
+
+
+    //Complexity of Algo
+    n=no of nodes
+    so Time complexity is 0(n) as we are adding the node and then poping oit 
+    out simantaneously so we are not visiting the node twice
+
+    Spac complexity is also O(n) as we are using only stack
+
+
+
+
+    //BFS
+    when we will start with A and put in stack and then remove it(Stack== )
+
+    
